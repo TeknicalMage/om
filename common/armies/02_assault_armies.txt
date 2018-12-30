@@ -1,0 +1,33 @@
+#Defensive armies can't transport of the planet
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+#morale_damage = 1		# average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+
+mech_assault_army = {
+	damage = 1.50
+	health = 1.50
+	morale = 1.00
+	morale_damage = 1.25
+	collateral_damage = 3.50
+	war_exhaustion = 0.80
+	time = 440
+	icon_frame = 2
+	prerequisites = { "tech_mech_armies" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 350
+		}
+
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+}
+
