@@ -1449,6 +1449,11 @@ tech_mech_armies = {
 	tier = 1
 	category = { voidcraft }
 	prerequisites = { "tech_assault_armies" }
+
+	spriteType = {
+     name = "GFX_tech_assault_armies"
+     texturefile = "gfx/interface/icons/technologies/tech_assault_armies.dds"
+ }
 }
 
 # ##################
